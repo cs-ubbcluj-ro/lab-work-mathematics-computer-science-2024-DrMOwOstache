@@ -6,7 +6,7 @@
       {
         "id": "5c0b853711481124",
         "type": "tabs",
-        "dimension": 30.83756345177665,
+        "dimension": 33.88324873096447,
         "children": [
           {
             "id": "fd629dd60a73f5c6",
@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sintactic rules/type_dec.md",
+                "file": "Sintactic rules/declaration.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,18 +25,14 @@
       {
         "id": "9cfac73d7f09acdf",
         "type": "tabs",
-        "dimension": 69.16243654822335,
+        "dimension": 66.11675126903553,
         "children": [
           {
             "id": "25ae97faf44fdaf2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "lexic/identifiers/Types/string.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ]
@@ -105,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "lexic/identifiers/Types/string.md",
+                "file": "Sintactic rules/declaration.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "lexic/identifiers/Types/string.md",
+                "file": "Sintactic rules/declaration.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "lexic/identifiers/Types/string.md"
+                "file": "Sintactic rules/declaration.md"
               }
             }
           }
@@ -166,21 +162,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "25ae97faf44fdaf2",
+  "active": "fd629dd60a73f5c6",
   "lastOpenFiles": [
+    "plans",
+    "Sintactic rules/declaration.md",
+    "Sintactic rules/type_dec.md",
+    "lexic/identifiers/Types/string.md",
     "lexic/identifiers/Types/int.md",
     "lexic/identifiers/Types/char.md",
     "lexic/identifiers/Types/bool.md",
     "lexic/identifiers/Types/float.md",
     "Sintactic rules/array_dec.md",
-    "Sintactic rules/type_dec.md",
     "lexic",
     "lexic/identifiers/const.md",
     "lexic/ascii_nld.md",
     "lexic/sign.md",
     "lexic/identifiers/type.md",
     "lexic/identifiers/id.md",
-    "lexic/identifiers/Types/string.md",
     "lexic/identifiers/digit.md",
     "lexic/digit_nn.md",
     "lexic/letter.md",
