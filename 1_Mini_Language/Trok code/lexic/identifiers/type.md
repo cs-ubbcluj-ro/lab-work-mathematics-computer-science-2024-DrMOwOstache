@@ -1,0 +1,1 @@
+::= "char" | "bool" | "float" | "int" | "string"

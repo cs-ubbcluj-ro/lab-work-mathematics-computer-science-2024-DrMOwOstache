@@ -1,0 +1,1 @@
+ascii without letters and digits
