@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sintactic rules/declaration.md",
+                "file": "tests/verify if prime number.md",
                 "mode": "source",
                 "source": false
               }
@@ -23,19 +23,46 @@
         ]
       },
       {
-        "id": "9cfac73d7f09acdf",
-        "type": "tabs",
+        "id": "ffc7923481f6d580",
+        "type": "split",
         "dimension": 66.11675126903553,
         "children": [
           {
-            "id": "25ae97faf44fdaf2",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
-            }
+            "id": "9cfac73d7f09acdf",
+            "type": "tabs",
+            "dimension": 43.84615384615385,
+            "children": [
+              {
+                "id": "25ae97faf44fdaf2",
+                "type": "leaf",
+                "state": {
+                  "type": "graph",
+                  "state": {}
+                }
+              }
+            ]
+          },
+          {
+            "id": "65a3658f2ef56f3b",
+            "type": "tabs",
+            "dimension": 56.15384615384615,
+            "children": [
+              {
+                "id": "e477bdfb0c0bd1fc",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Sintactic rules/declarations/function_dec.md",
+                    "mode": "preview",
+                    "source": false
+                  }
+                }
+              }
+            ]
           }
-        ]
+        ],
+        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -101,7 +128,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sintactic rules/declaration.md",
+                "file": "tests/verify if prime number.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +145,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sintactic rules/declaration.md",
+                "file": "tests/verify if prime number.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +168,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sintactic rules/declaration.md"
+                "file": "tests/verify if prime number.md"
               }
             }
           }
@@ -164,32 +191,41 @@
   },
   "active": "fd629dd60a73f5c6",
   "lastOpenFiles": [
-    "plans",
-    "Sintactic rules/declaration.md",
+    "Sintactic rules/declarations/function_dec.md",
+    "Sintactic rules/lists/declaration_list.md",
+    "Sintactic rules/declarations/declaration.md",
+    "tests/verify if prime number.md",
+    "lexic/identifiers/const.md",
+    "Sintactic rules/structures/statement.md",
+    "Sintactic rules/lists/Untitled.md",
+    "Sintactic rules/declarations/array_dec.md",
+    "Sintactic rules/lists/statement_list.md",
+    "Sintactic rules/structures/simple_stt.md",
+    "Sintactic rules/structures",
+    "Sintactic rules/lists/type_list.md",
+    "Sintactic rules/declarations",
+    "Sintactic rules/declarations.md",
+    "Sintactic rules/lists",
+    "Sintactic rules/id_list.md",
+    "tests",
+    "lexic/identifiers/id.md",
+    "lexic/id_lex.md",
     "Sintactic rules/type_dec.md",
-    "lexic/identifiers/Types/string.md",
     "lexic/identifiers/Types/int.md",
+    "plans",
+    "lexic/identifiers/Types/string.md",
     "lexic/identifiers/Types/char.md",
     "lexic/identifiers/Types/bool.md",
     "lexic/identifiers/Types/float.md",
-    "Sintactic rules/array_dec.md",
     "lexic",
-    "lexic/identifiers/const.md",
     "lexic/ascii_nld.md",
     "lexic/sign.md",
     "lexic/identifiers/type.md",
-    "lexic/identifiers/id.md",
     "lexic/identifiers/digit.md",
     "lexic/digit_nn.md",
-    "lexic/letter.md",
-    "lexic/number.md",
-    "lexic/number_nn.md",
     "Sintactic rules",
-    "Type.md",
     "lexic/identifiers/Types",
     "Unive",
-    "Untitled/Untitled",
-    "lexic/identifiers",
-    "Welcome.md"
+    "Untitled/Untitled"
   ]
 }
