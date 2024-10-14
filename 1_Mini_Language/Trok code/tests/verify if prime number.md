@@ -9,7 +9,7 @@ func verify_prime : <nr={|int}>-><bool>
 	?( nr % 2 == 0 ) :
 		<<< false;
 	#] i = {0|int} | i*i>=nr | i=i+2 [:
-		?< nr % i == 0> :
+		?( nr % i == 0) :
 			<<< false
 	<<< true;
 }

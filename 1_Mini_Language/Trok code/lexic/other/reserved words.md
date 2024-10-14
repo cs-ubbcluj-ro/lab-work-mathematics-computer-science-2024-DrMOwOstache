@@ -1,0 +1,8 @@
+- func
+- char
+- int
+- float
+- bool
+- string
+- ?(
+- \\#]
