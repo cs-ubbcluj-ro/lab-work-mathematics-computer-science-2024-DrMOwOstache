@@ -20,5 +20,5 @@ func verify_prime : <nr={|int}>-><bool>
 func main : <>-><>
 {
 	nr = {21|int} <<< input;
-	output <<< verify_prime();
+	output <<< verify_prime(nr);
 }
