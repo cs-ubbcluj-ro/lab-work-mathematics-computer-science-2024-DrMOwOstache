@@ -1,1 +1,1 @@
-::= "func "<[[id]]> " : " "<"\[<[[declaration_list]]>]">"->""<"\[<[[type]]>]">""{"<[[statement]]>"}"
+::= "func "<[[id]]> " : " "<"<[[declaration_list]]>">"->""<"<[[type]]>">""{"<[[statement]]>"}" | "func "<[[id]]> " : " "<"">"->""<"<[[type]]>">""{"<[[statement]]>"}" | "func "<[[id]]> " : " "<"<[[declaration_list]]>">"->""<"">""{"<[[statement]]>"}" | "func "<[[id]]> " : " "<"">"->""<"">""{"<[[statement]]>"}"

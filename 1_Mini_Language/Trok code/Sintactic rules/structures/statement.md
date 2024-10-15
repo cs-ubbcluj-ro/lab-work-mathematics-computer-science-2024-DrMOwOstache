@@ -1,0 +1,1 @@
+::=<[[simple_stmt]]>|<[[struct_stmt]]>|<[[return_stmt]]>

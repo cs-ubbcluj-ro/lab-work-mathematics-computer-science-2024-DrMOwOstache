@@ -1,0 +1,1 @@
+::= <[[assign_stmt]]>|<[[assign_stmt]]><[[assign_list]]>

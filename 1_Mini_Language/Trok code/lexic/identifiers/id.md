@@ -1,1 +1,1 @@
-::= <[[letter]]> | <[[letter]]>{<[[id_lex]]>}
+::= <[[letter]]> | <[[letter]]><[[id_list]]>

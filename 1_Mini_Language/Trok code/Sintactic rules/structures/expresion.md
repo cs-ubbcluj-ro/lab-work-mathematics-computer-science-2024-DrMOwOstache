@@ -1,1 +1,1 @@
-::= <[[id]]>\[<[[operator]]><[[expresion]]>] 
+::= <[[id]]> | <[[id]]><[[operator]]><[[expresion]]>| <[[const]]>|<[[const]]><[[operator]]><[[expresion]]>|<[[func_ref]]>|<[[func_ref]]><[[operator]]><[[expresion]]>

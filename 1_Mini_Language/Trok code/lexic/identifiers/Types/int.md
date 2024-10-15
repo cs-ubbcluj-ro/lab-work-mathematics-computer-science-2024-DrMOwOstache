@@ -1,1 +1,1 @@
-::= \[<[[sign]]>]<[[number_nn]]>
+::= <[[sign]]><[[number_nn]]> | <[[number_nn]]>

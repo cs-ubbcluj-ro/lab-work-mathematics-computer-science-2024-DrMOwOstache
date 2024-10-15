@@ -1,0 +1,1 @@
+::="#]" <[[declaration]]> "|" <[[relation_list]]> | <[[assign_list]]> "\[:"<[[statement]]>";" | "#]" <[[declaration]]> "|" <[[relation_list]]> | <[[assign_list]]> "\[:"{<[[statement_list]]>}

@@ -41,6 +41,13 @@
         "a": 1,
         "rgb": 11992858
       }
+    },
+    {
+      "query": "path: \"Sintactic rules/loops\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 14701199
+      }
     }
   ],
   "collapse-display": false,
@@ -53,6 +60,6 @@
   "repelStrength": 13.2291666666667,
   "linkStrength": 1,
   "linkDistance": 118,
-  "scale": 0.7132754626224781,
+  "scale": 0.5087618855792887,
   "close": true
 }

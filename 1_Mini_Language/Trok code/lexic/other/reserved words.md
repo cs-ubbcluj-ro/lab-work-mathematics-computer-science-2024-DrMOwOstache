@@ -6,3 +6,6 @@
 - string
 - ?(
 - \\#]
+- input
+- output
+- pass

@@ -1,1 +1,1 @@
-::=
+::= <[[statement]]>";" | <[[statement]]>";"<[[statement_list]]>

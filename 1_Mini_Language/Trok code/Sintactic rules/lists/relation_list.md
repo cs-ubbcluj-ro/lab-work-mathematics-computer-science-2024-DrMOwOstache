@@ -1,1 +1,1 @@
-::= <[[relation]]>\[<[[comparison_char]]><[[relation_list]]>]
+::= <[[relation]]>| <[[relation]]><[[comparison_char]]><[[relation_list]]>

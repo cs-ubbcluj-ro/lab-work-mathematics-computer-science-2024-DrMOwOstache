@@ -1,0 +1,1 @@
+|::=<[[declaration]]>"<<<""input"| "output""<<<"<[[func_ref]]> | "output""<<<"<[[id]]> | "output""<<<"<[[const]]>
