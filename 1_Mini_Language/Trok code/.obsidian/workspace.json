@@ -18,7 +18,7 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "lexic/other/reserved words.md",
+                    "file": "Sintactic rules/lists/const_id_list.md",
                     "mode": "source",
                     "source": false
                   }
@@ -133,7 +133,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "lexic/other/reserved words.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,7 +149,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "lexic/other/reserved words.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,9 +170,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "lexic/other/reserved words.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -194,35 +190,35 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "fd629dd60a73f5c6",
+  "active": "25ae97faf44fdaf2",
   "lastOpenFiles": [
+    "lexic/operator.md",
+    "Sintactic rules/structures/expresion.md",
+    "Sintactic rules/structures/relation.md",
+    "Sintactic rules/lists/relation_list.md",
+    "Sintactic rules/structures/if_statement.md",
+    "lexic/letter.md",
+    "lexic/identifiers/Types/char.md",
+    "lexic/identifiers/Types/float.md",
+    "lexic/identifiers/Types/int.md",
+    "lexic/identifiers/Types/string.md",
+    "Sintactic rules/lists/const_id_list.md",
+    "Sintactic rules/structures/func_ref.md",
+    "lexic/const_id.md",
+    "Sintactic rules/loops/for_stmt.md",
+    "tests/verify if prime number.md",
+    "lexic/other/reserved words.md",
     "Sintactic rules/structures/return_stmt.md",
     "Sintactic rules/structures/simple_stmt.md",
     "Sintactic rules/structures/statement.md",
-    "Sintactic rules/loops/for_stmt.md",
-    "Sintactic rules/structures/func_ref.md",
     "Sintactic rules/lists/statement_list.md",
     "Sintactic rules/lists/assign_list.md",
     "Sintactic rules/structures/struct_stmt.md",
-    "tests/verify if prime number.md",
     "Sintactic rules/loops",
     "Sintactic rules/declarations/function_dec.md",
     "Sintactic rules/declarations/declaration.md",
     "Sintactic rules/declarations/assign_stmt.md",
     "Sintactic rules/declarations/array_dec.md",
-    "Sintactic rules/lists/const_list.md",
-    "Sintactic rules/structures/if_statement.md",
-    "Sintactic rules/structures/expresion.md",
-    "Sintactic rules/lists/declaration_list.md",
-    "Sintactic rules/lists/declaration_list_func.md",
-    "Sintactic rules/lists/id_list.md",
-    "Sintactic rules/lists/relation_list.md",
-    "Sintactic rules/structures/relation.md",
-    "Sintactic rules/structures/io_statement.md",
-    "lexic/relation_char.md",
-    "lexic/other/reserved words.md",
-    "lexic/sign.md",
-    "lexic/number_nn.md",
     "lexic/other",
     "Sintactic rules/structures",
     "Sintactic rules/declarations",
