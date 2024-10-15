@@ -1,4 +1,88 @@
+Lexic:
 
+- Some rules:
+	+operators:
+		- <<<
+		- \+
+		- \-
+		- /
+		- %
+		- \*
+		- <
+		- >
+		- <=
+		- \>=
+		- ==
+		- =
+	+reserved words:
+		- func
+		- char
+		- int
+		- float
+		- bool
+		- string
+		- ?(
+		- \\#]
+		- input
+		- output
+		- pass
+	+separators:
+		- <> 
+		- {} 
+		- \[] 
+		- ()
+		- : 
+		- ; 
+		- space
+
+
+- bool ::= "true" | "false"
+- char ::= <letter> | <digit> | <ascii_nld>
+- float ::= <int>"."<number> | <int>"."
+- int ::= <sign><number_nn> | <number_nn>
+- string ::= """<char>""" | """<char><string>""" | ""
+- const ::= <float>|<bool>|<char>|<int>|<string>
+- digit ::= "0" | <digit_nn>
+- id ::= <letter> | <letter><id_list>
+- type ::= "char" | "bool" | "float" | "int" | "string"
+- ascii_nld ::= ascii without letters and digits
+- comparison_char ::= "and" | "or"  
+- const_id ::= <const>|<id>
+- digit_nn ::= "1" | "2" | ... | "9"
+- id_lex ::= <letter> | <digit> | "_" 
+- letter ::="A" | "B" | "C" | ... | "Z" | "a" | "b" | "c" | ... | "z"
+- number ::= <digit>|<digit><number>
+- number_nn ::=<digit_nn><number> | "0"
+- operator ::= "+" | "-" | "/" | "%" | "*"
+- relation_char ::= ">" | "<" | ">=" | "<=" | "\==" | "!="
+- sign ::= "-" | "+"
+		
+	
+
+Sintactic rules:
+
+- array_dec ::= "\[""]" | "\["<const_list>"]"
+- assign_stmt ::= <id> "<<<" <id> | <id> "<<<" <func_ref> | <id> "<<<" <const>
+- declaration ::= <id> "=" "{"\<const>"|"<type>"}" | <id> "=" "{"<array_dec>"|"<type>"}" | <id> "=" "{""|"<type>"}"
+- function_dec ::= "func "<id> " : " "<"<declaration_list>">"->""<"<type>">""{"<statement>"}" | "func "<id> " : " "<"">"->""<"<type>">""{"<statement>"}" | "func "<id> " : " "<"<declaration_list>">"->""<"">""{"<statement>"}" | "func "<id> " : " "<"">"->""<"">""{"<statement>"}"
+- assign_list ::= <assign_stmt>|<assign_stmt><assign_list>
+- const_id_list ::= <const_id>|<const_id>","<const_id_list>
+- const_list ::= <const>|<const> "," <const_list>
+- declaration_list ::= <declaration> ";" | <declaration> "," <declaration_list>
+- declaration_list_func ::= <declaration> | <declaration> "," <declaration_list>
+- id_list ::= <id_lex>|<id_lex><id_list>
+- relation_list ::= <relation>| <relation><comparison_char><relation_list>
+- statement_list ::= <statement>";" | <statement>";"<statement_list>
+- for_stmt ::="#]" <declaration> "|" <relation_list> | <assign_list> "\[:"<statement>";" | "#]" <declaration> "|" <relation_list> | <assign_list> "\[:"{<statement_list>}
+- expresion ::= <id> | <id><operator><expresion>| <const>|<const><operator><expresion>|<func_ref>|<func_ref><operator><expresion>
+- func_ref ::= <id>"("")"|<id>"("<const_id_list>")"
+- if_statement ::= "?("<relation_list>")"":"<statement_list>|"?("<relation_list>")"":"<statement_list>"//"<statement_list>|"?("<relation_list>")"":"<statement_list>"//"<if_statement>
+- io_statement ::= <declaration>"<<<""input"| "output""<<<"<func_ref> | "output""<<<"<id> | "output""<<<"<const>
+- relation ::= <expresion><relation_char><expresion>
+- return_stmt ::= "<<<" <const> | "<<<" <id> | "<<<" <func_ref> |"<<<" <expresion>| "<<<""pass"
+- simple_stmt ::= <io_statement> | <assign_stmt> | <func_ref> 
+- statement ::= <simple_stmt>|<struct_stmt>|<return_stmt>
+- struct_stmt ::= <for_stmt>
 
 ---function for verifying if a number is prime
 
