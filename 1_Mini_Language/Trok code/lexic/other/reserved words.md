@@ -7,6 +7,5 @@
 - for
 - cin
 - cout
-- pass
 - void
 - return 
