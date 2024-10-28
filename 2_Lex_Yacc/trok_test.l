@@ -5,22 +5,6 @@
 
 #define MAX_SYMBOLS 1000
 
-enum tokens {
-	Identifier,
-	Constant,
-	Reserved word,
-	Separator,
-	Operator
-}
-
-enum type {
-	INTEGER,
-	FLOAT,
-	CHARACTER,
-	BOOL,
-	STRING
-}
-
 typedef struct {
 	char name[50];
 } Symbol;
@@ -32,11 +16,15 @@ void add_symbol(const char *name)
 {
 	if (symbol_count < MAX_SYMBOLS) 
 	{
-		for(int i = 0; i<symbol_count; i++)
+		int k =0;
+		for(int i = 0; i<symbol_count && k==0; i++)
 			if(strcmp(symbol_table[symbol_count].name, name)==0)
-				return;
-		strcpy(symbol_table[symbol_count].name, name);
-        	symbol_count++;
+				k=1;
+		if(k==0)
+		{
+			strcpy(symbol_table[symbol_count].name, name);
+        		symbol_count++;
+        	}
         } 
         else 
         	printf("Symbol table overflow!\n");
@@ -50,7 +38,7 @@ void print_symbol_table() {
 
 %}
 
-SEPARATOR		[\<\>\{\}\[\]\(\):; \n\t]
+SEPARATOR		[\<\>\{\}\[\]\(\):;]
 OPERATORS_PREDEFINED	"<<"|">>"|"+"|"-"|"/"|"*"|"%"|"<"|"<="|">"|">="|"=="|"="|"!="|"&&"|"||"
 
 SIGN			"-"|"+"
@@ -65,7 +53,7 @@ LETTER			[a-zA-Z]
 CHAR			"LETTER"|"DIGIT"|[!><?*&^%$#(){}\[\]+=-_:;\|]
 STRING			\"{CHAR}*\"|""
 CONST			{FLOAT}|{BOOL}|{CHAR}|{INT}|{STRING}
-TYPE			"char" | "bool" | "float" | "int" | "string"
+TYPE			"char"|"bool"|"float"|"int"|"string"
 RESERVED_WORDS		{TYPE}|"if"|"for"|"cin"|"cout"|"void"|"return"
 ID_LEX			{LETTER}|{DIGIT}|"_"
 ID_LIST			{ID_LEX}+
@@ -73,7 +61,7 @@ ID			{LETTER}{ID_LIST}?
 OPERATOR		"+"|"-"|"/"|"*"|"%"
 COMPARITOR		"and"|"&&"|"or"|"||"
 CONST_ID		{CONST}|{ID}
-RELATION_CHAR		">" | "<" | ">=" | "<=" | "==" | "!="
+RELATION_CHAR		">"|"<"|">="|"<="|"=="|"!="
 
 %%
 
@@ -83,20 +71,21 @@ RELATION_CHAR		">" | "<" | ">=" | "<=" | "==" | "!="
 			
 {ID}			{
 				printf("IDENTIFIER: %s\n", yytext);
-				add_symbol(yytext)
+				add_symbol(yytext);
 			}
 
 {SEPARATOR}		{
-				printf("SEPARATOR: %s\n" yytext);
+				printf("SEPARATOR: %s\n", yytext);
+			}
+
+{OPERATORS_PREDEFINED}	{
+				printf("OPERATORS_PREDEFINED: %s\n", yytext);
 			}
 
 {CONST}			{
 				printf("CONSTANT: %s\n", yytext);
 			}
-			
-{OPERATORS_PREDEFINED}	{
-				printf("OPERATORS_PREDEFINED: %s\n", yytext);
-			}
+
 
 [ \t\n]+  { /* Ignore whitespace */ }
 
