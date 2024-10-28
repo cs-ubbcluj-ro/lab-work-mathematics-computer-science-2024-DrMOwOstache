@@ -1,1 +1,1 @@
-::=<[[declaration]]>"<<<""input"| "output""<<<"<[[func_ref]]> | "output""<<<"<[[id]]> | "output""<<<"<[[const]]>
+::="cin"">>"<[[id]]>| "cout""<<"<[[func_ref]]> | "cout""<<"<[[id]]> | "put""<<"<[[const]]>

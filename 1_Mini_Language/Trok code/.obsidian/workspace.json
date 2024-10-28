@@ -18,10 +18,12 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "lexic/sign.md",
+                    "file": "Sintactic rules/structures/struct_stmt.md",
                     "mode": "source",
                     "source": false
-                  }
+                  },
+                  "icon": "lucide-file",
+                  "title": "struct_stmt"
                 }
               }
             ]
@@ -40,7 +42,9 @@
                     "type": "leaf",
                     "state": {
                       "type": "graph",
-                      "state": {}
+                      "state": {},
+                      "icon": "lucide-git-fork",
+                      "title": "Graph view"
                     }
                   }
                 ]
@@ -58,7 +62,9 @@
                         "file": "tests/verify if prime number.md",
                         "mode": "source",
                         "source": false
-                      }
+                      },
+                      "icon": "lucide-file",
+                      "title": "verify if prime number"
                     }
                   }
                 ]
@@ -87,7 +93,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -102,7 +110,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -110,7 +120,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -133,7 +145,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "lexic/sign.md",
+                "file": "Sintactic rules/structures/struct_stmt.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +153,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for struct_stmt"
             }
           },
           {
@@ -150,10 +164,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "lexic/sign.md",
+                "file": "Sintactic rules/structures/struct_stmt.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from struct_stmt"
             }
           },
           {
@@ -164,7 +180,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -173,8 +191,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "lexic/sign.md"
-              }
+                "file": "Sintactic rules/structures/struct_stmt.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of struct_stmt"
             }
           }
         ]
@@ -196,32 +216,32 @@
   },
   "active": "fd629dd60a73f5c6",
   "lastOpenFiles": [
+    "Sintactic rules/structures/statement.md",
+    "Sintactic rules/structures/return_stmt.md",
+    "Sintactic rules/structures/struct_stmt.md",
+    "Sintactic rules/lists/statement_list.md",
+    "Sintactic rules/structures/simple_stmt.md",
+    "Sintactic rules/lists/declaration_list.md",
+    "Sintactic rules/lists/assign_list.md",
+    "Sintactic rules/declarations/assign_stmt.md",
+    "Sintactic rules/structures/relation.md",
+    "Sintactic rules/lists/relation_list.md",
+    "Sintactic rules/structures/expresion.md",
     "lexic/relation_char.md",
+    "Sintactic rules/structures/io_statement.md",
+    "Sintactic rules/structures/if_statement.md",
+    "Sintactic rules/loops/for_stmt.md",
+    "Sintactic rules/declarations/declaration.md",
+    "lexic/comparison_char.md",
     "lexic/operator.md",
+    "Sintactic rules/declarations/function_dec.md",
+    "Sintactic rules/lists/declaration_list_func.md",
+    "Sintactic rules/lists/const_list.md",
+    "Sintactic rules/lists/const_id_list.md",
+    "Sintactic rules/declarations/array_dec.md",
+    "lexic/sign.md",
     "lexic/number_nn.md",
     "lexic/number.md",
-    "lexic/letter.md",
-    "lexic/id_lex.md",
-    "lexic/digit_nn.md",
-    "lexic/const_id.md",
-    "lexic/comparison_char.md",
-    "lexic/ascii_nld.md",
-    "lexic/identifiers/type.md",
-    "lexic/identifiers/id.md",
-    "lexic/identifiers/digit.md",
-    "lexic/identifiers/const.md",
-    "lexic/identifiers/Types/string.md",
-    "lexic/identifiers/Types/int.md",
-    "lexic/identifiers/Types/float.md",
-    "lexic/identifiers/Types/char.md",
-    "lexic/identifiers/Types/bool.md",
-    "lexic/other/separators.md",
-    "lexic/other/reserved words.md",
-    "lexic/other/operators_predefined.md",
-    "Sintactic rules/structures/struct_stmt.md",
-    "Sintactic rules/structures/statement.md",
-    "Sintactic rules/structures/simple_stmt.md",
-    "Sintactic rules/structures/return_stmt.md",
     "Sintactic rules/loops",
     "lexic/other",
     "Sintactic rules/structures",

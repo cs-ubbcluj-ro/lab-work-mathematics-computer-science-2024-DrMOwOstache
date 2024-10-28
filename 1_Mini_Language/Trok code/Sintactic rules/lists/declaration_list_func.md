@@ -1,1 +1,0 @@
-::= <[[declaration]]> | <[[declaration]]> "," <[[declaration_list]]>

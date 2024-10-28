@@ -1,1 +1,1 @@
-::= <[[io_statement]]> | <[[assign_stmt]]> | <[[func_ref]]> 
+::= <[[io_statement]]> | <[[assign_list]]> | <[[func_ref]]>| <[[declaration_list]]>

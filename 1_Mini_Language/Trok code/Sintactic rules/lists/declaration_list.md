@@ -1,1 +1,1 @@
-::= <[[declaration]]> ";" | <[[declaration]]> "," <[[declaration_list]]>
+::= <[[declaration]]> | <[[declaration]]> "," <[[declaration_list]]>

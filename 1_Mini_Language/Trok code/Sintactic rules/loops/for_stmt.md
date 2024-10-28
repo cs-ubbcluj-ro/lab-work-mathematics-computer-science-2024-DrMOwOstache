@@ -1,1 +1,1 @@
-::="#]" <[[declaration]]> "|" <[[relation_list]]> | <[[assign_list]]> "\[:"<[[statement]]>";" | "#]" <[[declaration]]> "|" <[[relation_list]]> | <[[assign_list]]> "\[:"{<[[statement_list]]>}
+::="for""(" <[[declaration_list]]> ";" <[[relation_list]]> ";" <[[assign_list]]> ")"<[[statement_list]]>";" | "for""(" <[[assign_list]]> "|" <[[relation_list]]> | <[[assign_list]]> ")"{"<[[statement_list]]>"}"

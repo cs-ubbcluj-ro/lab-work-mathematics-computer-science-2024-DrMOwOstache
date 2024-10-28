@@ -1,11 +1,12 @@
-- func
 - char
 - int
 - float
 - bool
 - string
-- ?(
-- \\#]
-- input
-- output
+- if
+- for
+- cin
+- cout
 - pass
+- void
+- return 

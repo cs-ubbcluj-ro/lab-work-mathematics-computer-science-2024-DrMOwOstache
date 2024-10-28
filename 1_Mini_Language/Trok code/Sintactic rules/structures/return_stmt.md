@@ -1,1 +1,1 @@
-::= "<<<" <[[const]]> | "<<<" <[[id]]> | "<<<" <[[func_ref]]> |"<<<" <[[expresion]]>| "<<<""pass"
+::= "return" <[[relation_list]]> | "return" <[[expresion]]>

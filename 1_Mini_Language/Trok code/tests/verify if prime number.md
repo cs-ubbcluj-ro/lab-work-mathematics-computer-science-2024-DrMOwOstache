@@ -1,23 +1,25 @@
 
 ```
-func verify_prime : <nr={|int}>-><bool>
+bool verify_prime(int nr)
 {
-	?( nr < 2 ) :
-		<<< false;
-	?( nr == 2 ) :
-		<<< true;
-	?( nr % 2 == 0 ) :
-		<<< false;
-	#] i = {0|int} | i*i>=nr | i=i+2 [:
-		?( nr % i == 0) :
-			<<< false
-	<<< true;
+	if( nr < 2 )
+		return 0;
+	if( nr == 2 )
+		return 1;
+	if( nr % 2 == 0 )
+		return 0;
+	for( int i = 0; i*i>=nr; i=i+2 )
+		if( nr % i == 0)
+			return 0;
+	return 1;
 }
 
 
-func main : <>-><>
+int main
 {
-	nr = {21|int} <<< input;
-	output <<< verify_prime();
+	int nr;
+	cin>>nr;
+	cout<<verify_prime();
+	return 0;
 }
 ```

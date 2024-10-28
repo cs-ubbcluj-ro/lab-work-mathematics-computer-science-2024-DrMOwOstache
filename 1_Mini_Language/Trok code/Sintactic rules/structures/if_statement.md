@@ -1,1 +1,1 @@
-::= "?("<[[relation_list]]>")"":"<[[statement_list]]>|"?("<[[relation_list]]>")"":"<[[statement_list]]>"//"<[[statement_list]]>|"?("<[[relation_list]]>")"":"<[[statement_list]]>"//"<[[if_statement]]>
+::= "if"("<[[relation_list]]>")"<[[statement_list]]> | "if"("<[[relation_list]]>")"<[[statement_list]]>"else"<[[statement_list]]> | "if""("<[[relation_list]]>")"<[[statement_list]]>"else"<[[if_statement]]>
