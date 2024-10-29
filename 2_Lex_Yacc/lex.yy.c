@@ -533,10 +533,10 @@ void add_symbol(const char *name)
 {
 	if (symbol_count < MAX_SYMBOLS) 
 	{
-		int k =0;
+		int k=0;
 		for(int i = 0; i<symbol_count && k==0; i++)
-			if(strcmp(symbol_table[symbol_count].name, name)==0)
-				k=1;
+			if(strcmp(symbol_table[i].name, name)==0)
+				k++;
 		if(k==0)
 		{
 			strcpy(symbol_table[symbol_count].name, name);
