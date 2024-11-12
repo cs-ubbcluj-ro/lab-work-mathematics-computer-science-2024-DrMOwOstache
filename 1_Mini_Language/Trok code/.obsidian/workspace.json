@@ -214,11 +214,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "fd629dd60a73f5c6",
+  "active": "25ae97faf44fdaf2",
   "lastOpenFiles": [
+    "lexic/letter.md",
+    "Sintactic rules/structures/struct_stmt.md",
     "Sintactic rules/structures/statement.md",
     "Sintactic rules/structures/return_stmt.md",
-    "Sintactic rules/structures/struct_stmt.md",
     "Sintactic rules/lists/statement_list.md",
     "Sintactic rules/structures/simple_stmt.md",
     "Sintactic rules/lists/declaration_list.md",
@@ -241,7 +242,6 @@
     "Sintactic rules/declarations/array_dec.md",
     "lexic/sign.md",
     "lexic/number_nn.md",
-    "lexic/number.md",
     "Sintactic rules/loops",
     "lexic/other",
     "Sintactic rules/structures",

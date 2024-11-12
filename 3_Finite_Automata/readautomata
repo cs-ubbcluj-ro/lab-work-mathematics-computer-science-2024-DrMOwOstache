@@ -1,0 +1,55 @@
+class FiniteAutomaton:
+    def __init__(self, states, alphabet, transitions, initial_state, final_states):
+        self.states = states
+        self.alphabet = alphabet
+        self.transitions = transitions
+        self.initial_state = initial_state
+        self.final_states = final_states
+
+    def display_automaton(self):
+        print("States:", self.states)
+        print("Alphabet:", self.alphabet)
+        print("Transitions:")
+        for (start_state, symbol, end_state) in self.transitions:
+            print(f"  ({start_state}, {symbol}) -> {end_state}")
+        print("Initial State:", self.initial_state)
+        print("Final States:", self.final_states)
+
+def verifyNotExistance(thing = "name", listOfthings = ""):
+    for aux in listOfthings:
+        if aux == thing:
+            return False
+    return True
+
+def read_automaton_from_file(file_path):
+    with open(file_path, 'r') as file:
+        states = []
+        alphabet = []
+        # Read transitions
+        transition_line = file.readline().strip()
+        transitions = []
+        for trans in transition_line.split('),('):
+            trans = trans.strip('()')
+            start_state, symbol, end_state = trans.split(',')
+            if verifyNotExistance(start_state, states):
+                states.append(start_state)
+            if verifyNotExistance(end_state, states):
+                states.append(end_state)
+            if verifyNotExistance(symbol,alphabet):
+                alphabet.append(symbol)
+            transitions.append((start_state.strip(), symbol.strip(), end_state.strip()))
+
+        # Read initial state
+        initial_state = file.readline().strip()
+
+        # Read final states
+        final_states = set(file.readline().strip().split(','))
+
+    return FiniteAutomaton(states, alphabet, transitions, initial_state, final_states)
+
+
+# Main program
+if __name__ == "__main__":
+    file_path = '3_Finite_Automata\writtenAutomata.txt'  # Adjust path if needed
+    automaton = read_automaton_from_file(file_path)
+    automaton.display_automaton()
