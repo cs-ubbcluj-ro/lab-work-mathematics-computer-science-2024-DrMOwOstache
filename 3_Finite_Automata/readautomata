@@ -26,6 +26,9 @@ def read_automaton_from_file(file_path):
         states = []
         alphabet = []
         # Read transitions
+        something = file.readline().strip()
+        something = file.readline().strip()
+        #print(something)
         transition_line = file.readline().strip()
         transitions = []
         for trans in transition_line.split('),('):
@@ -40,16 +43,15 @@ def read_automaton_from_file(file_path):
             transitions.append((start_state.strip(), symbol.strip(), end_state.strip()))
 
         # Read initial state
-        initial_state = file.readline().strip()
+        initial_state = file.readline().strip().removeprefix("<<")
 
         # Read final states
-        final_states = set(file.readline().strip().split(','))
+        final_states = set(file.readline().strip().removeprefix(">>").split(','))
 
     return FiniteAutomaton(states, alphabet, transitions, initial_state, final_states)
 
 
-# Main program
 if __name__ == "__main__":
-    file_path = '3_Finite_Automata\writtenAutomata.txt'  # Adjust path if needed
+    file_path = '3_Finite_Automata\writtenAutomata.txt'
     automaton = read_automaton_from_file(file_path)
     automaton.display_automaton()
