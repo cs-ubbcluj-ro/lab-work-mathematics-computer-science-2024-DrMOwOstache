@@ -17,7 +17,7 @@ E = {"true", "false","0", "1", "2", ... , "9", "A", "B", "C",
 
 S = function_dec_list
 --------
-
+P = {
 function_dec_list -> function_dec
 function_dec_list -> function_dec function_dec_list
 
@@ -149,3 +149,4 @@ digit -> digit_nn
 digit_nn -> "1" | "2" | ... | "9"
 
 bool -> "true" | "false"
+}
