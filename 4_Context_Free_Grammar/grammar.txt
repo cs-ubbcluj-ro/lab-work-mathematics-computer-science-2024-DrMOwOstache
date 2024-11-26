@@ -1,0 +1,151 @@
+G = (N, E, P, S)
+----------------
+N= {bool, char, float, int, string, const, digit, id, type, ascii_nld,
+    comparison_char, const_id, digit_nn, id_lex, letter, number, number_nn, 
+    operator, relation_char, sign, array_dec, assign_stmt, declaration,
+    const_list, declaration_list, id_list, relation_list, statement_list, 
+    for_stmt, expresion, func_ref, if_statement, io_statement, relation,
+    return_stmt, simple_stmt, statement, struct_stmt, function_dec,
+    assign_list, const_id_list, function_dec_list}
+
+E = {"true", "false","0", "1", "2", ... , "9", "A", "B", "C",
+     ... , "Z", "a", "b", "c", ... , "z", ascii without letters and digits, 
+     "-", "+", ".", """, "", "_", "char", "bool", "float", "int", "string", 
+     "and", "or", "&&", "||", "+", "-", "/", "%", "*",  ">", "<", ">=",
+     "<=", "==", "!=", "{", "}", "(", ")", "=", "[", "]", "cin", ">>",
+     "cout", "<<", "for", ";", "return", "void", }
+
+S = function_dec_list
+--------
+
+function_dec_list -> function_dec
+function_dec_list -> function_dec function_dec_list
+
+function_dec -> type id"("declaration_list")""{"statement_list"}"
+function_dec -> "void"id"("")""{"statement_list"}"
+function_dec -> type id"("declaration_list")""{"statement_list"}"
+function_dec -> "void"id"("")""{"statement_list"}"
+
+statement -> simple_stmt
+statement -> struct_stmt
+statement -> return_stmt
+
+return_stmt -> "return"relation_list
+return_stmt -> "return"expresion
+
+struct_stmt -> for_stmt
+
+for_stmt -> "for""("declaration_list";"relation_list;assign_list")"statement
+for_stmt -> "for""("declaration_list";"relation_list;assign_list")""{"statement_list"}"
+
+statement_list -> statement";"
+statement_list -> statement";"statement_list
+statement_list -> epsilon
+
+relation_list -> relation
+relation_list -> relation comparison_char relation_list
+
+relation -> expresion relation_char expresion
+
+expresion -> id
+expresion -> id operator expresion
+expresion -> const
+expresion -> const operator expresion
+expresion -> func_ref
+expresion -> func_ref operator expresion
+
+simple_stmt -> io_statement
+simple_stmt -> assign_list
+simple_stmt -> func_ref
+simple_stmt -> declaration_list
+
+assign_list -> assign_stmt
+assign_list -> assign_stmt","assign_list
+
+io_statement -> "cin"">>"id
+io_statement -> "cout""<<"func_ref
+io_statement -> "cout""<<"id
+io_statement -> "cout""<<"const
+
+declaration_list -> declaration
+declaration_list -> declaration","declaration_list
+
+declaration -> type id"="const
+declaration -> type id"["number"]""="array_dec
+declaration -> type id
+
+assign_stmt -> id"="id
+assign_stmt -> id"="func_ref
+assign_stmt -> id"="const
+
+func_ref -> id"("")"
+func_ref -> id"("const_id_list")"
+
+const_id_list -> const_id
+const_id_list -> const_id","const_id_list
+
+array_dec -> "{""}"
+array_dec -> "{"const_list"}"
+
+const_list -> const
+const_list -> const","const_list
+
+relation_char ->  ">" | "<" | ">=" | "<=" | "==" | "!="
+
+operator -> "+" | "-" | "/" | "%" | "*"
+
+const_id -> const
+const_id -> id
+
+comparison_char -> "and" | "or" | "&&" | "||"
+
+type -> "char" | "bool" | "float" | "int" | "string"
+
+id -> letter
+id -> letter id_list
+
+id_list -> id_lex
+id_list -> id_lex id_list
+
+id_lex -> letter
+id_lex -> digit
+id_lex -> "_"
+
+const -> float
+const -> bool
+const -> char
+const -> int
+const -> string
+
+string -> """char"""
+string -> """char string"""
+string -> ""
+
+float -> int"."number
+float -> int"."
+
+int -> sign number_nn
+int -> number_nn
+
+number_nn -> digit_nn number
+number_nn -> "0"
+
+number -> digit
+number -> digit number
+
+sign -> "-" | "+"
+
+char -> letter
+char -> digit
+char -> ascii_nld
+
+letter -> "A" | "B" | "C" | ... | "Z" | "a" | "b" | "c" | ... | "z"
+
+ascii_nld -> ascii without letters and digits
+
+digit -> "0"
+digit -> digit_nn
+
+digit_nn -> "1" | "2" | ... | "9"
+
+bool -> "true" | "false"

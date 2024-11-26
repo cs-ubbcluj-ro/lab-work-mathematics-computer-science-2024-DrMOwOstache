@@ -1,1 +1,1 @@
-::= <[[type]]><[[id]]> "("<[[declaration_list]]>")""{"<[[statement]]>"}" | <[[type]]><[[id]]>"()""{"<[[statement]]>"}" | "void "<[[id]]> "("<[[declaration_list]]>")""{"<[[statement]]>"}" | "void"<[[id]]> "()""{"<[[statement]]>"}"
+::= <[[type]]><[[id]]> "("<[[declaration_list]]>")""{"<[[statement_list]]>"}" | <[[type]]><[[id]]>"()""{"<[[statement_list]]>"}" | "void "<[[id]]> "("<[[declaration_list]]>")""{"<[[statement_list]]>"}" | "void"<[[id]]> "()""{"<[[statement_list]]>"}"

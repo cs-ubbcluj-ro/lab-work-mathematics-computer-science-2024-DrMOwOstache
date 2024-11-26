@@ -1,1 +1,1 @@
-::="cin"">>"<[[id]]>| "cout""<<"<[[func_ref]]> | "cout""<<"<[[id]]> | "put""<<"<[[const]]>
+::="cin"">>"<[[id]]>| "cout""<<"<[[func_ref]]> | "cout""<<"<[[id]]> | "cout""<<"<[[const]]>

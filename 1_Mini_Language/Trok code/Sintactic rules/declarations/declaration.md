@@ -1,1 +1,1 @@
-::=<[[type]]> <[[id]]> "=" <[[const]]> | <[[type]]> <[[id]]>"\[number]""=" <[[array_dec]]> | <[[type]]> <[[id]]> 
+::=<[[type]]> <[[id]]> "=" <[[const]]> | <[[type]]> <[[id]]>"\["[[number]]"]""=" <[[array_dec]]> | <[[type]]> <[[id]]> 
