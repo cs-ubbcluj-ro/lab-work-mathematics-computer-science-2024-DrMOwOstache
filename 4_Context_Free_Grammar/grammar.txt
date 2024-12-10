@@ -22,8 +22,8 @@ function_dec_list -> function_dec
 function_dec_list -> function_dec function_dec_list
 
 function_dec -> type id"("declaration_list")""{"statement_list"}"
-function_dec -> "void"id"("")""{"statement_list"}"
-function_dec -> type id"("declaration_list")""{"statement_list"}"
+function_dec -> "void"id"("declaration_list")""{"statement_list"}"
+function_dec -> type id"("")""{"statement_list"}"
 function_dec -> "void"id"("")""{"statement_list"}"
 
 statement -> simple_stmt
@@ -75,7 +75,7 @@ declaration_list -> declaration
 declaration_list -> declaration","declaration_list
 
 declaration -> type id"="const
-declaration -> type id"["number"]""="array_dec
+declaration -> type id"["number_nn"]""="array_dec
 declaration -> type id
 
 assign_stmt -> id"="id
