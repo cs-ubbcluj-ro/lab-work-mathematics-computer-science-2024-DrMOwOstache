@@ -2,44 +2,39 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "trok_yacc.tab.h"
+#include "y.tab.h"
 
 extern int yylineno;
 
 %}
 
-SEPARATOR				[\<\>\{\}\[\]\(\):\;]
-OPERATORS_PREDEFINED	"<<"|">>"|"+"|"-"|"/"|"*"|"%"|"<"|"<="|">"|">="|"=="|"="|"!="|"&&"|"||"
-
 SIGN				"-"|"+"
 DIGIT_NN			[1-9]
+
 DIGIT				"0"|{DIGIT_NN}
 NUMBER				{DIGIT}+
 NUMBER_NN			{DIGIT_NN}{NUMBER}|"0"
 INT					{SIGN}?{NUMBER_NN}
 FLOAT				{INT}"."{NUMBER}?
-BOOL				"true"|"false"
-LETTER				[a-zA-Z] 
-CHAR				"LETTER"|"DIGIT"|[!><?*&^%$#(){}\[\]+=-_:;\|]
-STRING				"\""{CHAR}*"\""|""
-CONST				{FLOAT}|{BOOL}|{CHAR}|{INT}|{STRING}
+STRING			"\""[a-zA-Z0-9!><?*&^%$#(){}\[\]+=-_:;\|]*"\""|""
+
 TYPE				"char"|"bool"|"float"|"int"|"string"
 RESERVED_WORDS		{TYPE}|"if"|"for"|"cin"|"cout"|"void"|"return"
-ID_LEX				{LETTER}|{DIGIT}|"_"
-ID_LIST				{ID_LEX}+
-ID					{LETTER}{ID_LIST}?
+
 OPERATOR			"+"|"-"|"/"|"*"|"%"
 COMPARISON_CHAR		"and"|"&&"|"or"|"||"
-CONST_ID			{CONST}|{ID}
 RELATION_CHAR		">"|"<"|">="|"<="|"=="|"!="
+CHAR				"\""{LETTER}"\""|"\""{DIGIT}"\""|"\""[!><?*&^%$#(){}\[\]+=-_:;\|]"\""
+ID					{LETTER}{ID_LIST}?
+BOOL				"true"|"false"
+CONST				{FLOAT}|{BOOL}|{CHAR}|{INT}|{STRING}
+CONST_ID			{CONST}|{ID}
+ID_LEX				{LETTER}|{DIGIT}|"_"
+ID_LIST				{ID_LEX}+
+LETTER				[a-zA-Z] 
+
 
 %%
-
-{SEPARATOR}			{
-						return(SEPARATOR);
-					}
-
-{OPERATORS_PREDEFINED}	{return(OPERATORS_PREDEFINED);}
 
 
 {NUMBER_NN}			{
@@ -92,20 +87,12 @@ RELATION_CHAR		">"|"<"|">="|"<="|"=="|"!="
 ">>"				{ return(INPUT); }
 "<<"				{ return(OUTPUT); }
 
-
-[ \t\n]+  { /* Ignore whitespace */ }
-
 \n                  { yylineno++; }
+
+[ \t]+  { /* Ignore whitespace */ }
+
+.*         {}
 
 %%
 
-int main(int argc, char **argv) {
-    yylex();  // Start scanning
-    //print_symbol_table(); // Print the symbol table
-    return yyparse();
-}
 
-yywrap()
-{
-  return(1);
-}

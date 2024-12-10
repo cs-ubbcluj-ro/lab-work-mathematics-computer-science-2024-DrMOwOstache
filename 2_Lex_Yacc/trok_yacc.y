@@ -4,6 +4,8 @@
     
 extern int yylineno;
 
+extern int yydebug = 1;
+
 %}
 
 %union {
@@ -14,19 +16,16 @@ extern int yylineno;
 }
 
 %token <int_val> NUMBER_NN 
-%token <str_val> ID OPERATORS_PREDEFINED COMPARISON_CHAR RESERVED_WORDS CONST_ID RELATION_CHAR SEPARATOR CONST TYPE
+%token <str_val> COMPARISON_CHAR RESERVED_WORDS CONST_ID RELATION_CHAR CONST TYPE
 %token <char_val> OPERATOR
-%token ID_LIST 
+%token ID_LIST ID
 %token I_KEYWORD O_KEYWORD FOR_KEYWORD RETURN_KEYWORD IF_KEYWORD ELSE_KEYWORD VOID_KEYWORD INPUT OUTPUT
 
-%left "||"
-%left "&&"
 %left '+' '-' 
 %left '*' '/' '%'
 %left UMINUS 
 
 %nonassoc '.' 
-%nonassoc '<' '>' "<=" ">=" "=="
 
 %start function_dec_list
 
@@ -120,9 +119,9 @@ declaration_list:
     ;
 
 declaration:
-      TYPE ID '=' CONST
-    | TYPE ID '[' NUMBER_NN ']' '=' array_dec
-    | TYPE ID
+      TYPE ' ' ID '=' CONST
+    | TYPE ' ' ID '[' NUMBER_NN ']' '=' array_dec
+    | TYPE ' ' ID
     ;
 
 assign_stmt:
@@ -154,8 +153,19 @@ const_list:
 
 %%
 
-void yyerror(char * s)
-/* yacc error handler */
+void yyerror(s)
+char *s;
 {   
  fprintf(stderr, "Error: %s at line %d\n", s, yylineno);
 } 
+
+int main(int argc, char **argv) {
+    //yylex();  // Start scanning
+    //print_symbol_table(); // Print the symbol table
+    return yyparse();
+}
+
+yywrap()
+{
+  return(1);
+}
